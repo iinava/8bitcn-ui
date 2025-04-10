@@ -24,16 +24,9 @@ export const tooltipVariants = cva("", {
       normal: "",
       retro: pressStart.className,
     },
-    variant: {
-      default: "bg-primary border-primary",
-      destructive: "bg-destructive border-destructive",
-      outline: "bg-background border-background",
-      secondary: "bg-secondary border-secondary",
-    },
   },
   defaultVariants: {
     font: "retro",
-    variant: "default",
   },
 })
 
@@ -45,10 +38,9 @@ function TooltipContent({
   className,
   children,
   font,
-  variant,
   ...props
 }: BitTooltipContentProps) {
-  const color = tooltipVariants({ font, variant })
+  const color = tooltipVariants({ font })
 
   return (
     <div className={cn("relative inline-flex", className)}>
@@ -106,10 +98,11 @@ function TooltipProvider({
 
 function TooltipTrigger({
   children,
+  asChild = true,
   ...props
 }: React.ComponentPropsWithoutRef<typeof ShadcnTooltipTrigger>) {
   return (
-    <ShadcnTooltipTrigger data-slot="tooltip-trigger" {...props}>
+    <ShadcnTooltipTrigger data-slot="tooltip-trigger" asChild={asChild} {...props}>
       {children}
     </ShadcnTooltipTrigger>
   )
