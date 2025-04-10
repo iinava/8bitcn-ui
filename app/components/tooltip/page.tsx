@@ -31,7 +31,7 @@ export default function TooltipPage() {
                 <div className="flex items-center justify-center min-h-[400px] relative">
                     <TooltipProvider>
                     <Tooltip delayDuration={500}>
-                        <TooltipTrigger asChild>
+                        <TooltipTrigger>
                             <Button variant="outline">Hover</Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -52,20 +52,26 @@ export default function TooltipPage() {
 
             <Separator />
 
-            <CodeSnippet>{`import { Tooltip } from "@/components/ui/8bit/tooltip"`}</CodeSnippet>
+    <CodeSnippet>{`import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/8bit/tooltip"`}
+    </CodeSnippet>
 
-            <CodeSnippet>
-                {` <TooltipProvider>
-                    <Tooltip delayDuration={500}>
-                        <TooltipTrigger asChild>
-                            <Button variant="outline">Hover</Button>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                            <p>Add to library</p>
-                        </TooltipContent>
-                    </Tooltip>
-                    </TooltipProvider>`}
-            </CodeSnippet>
+   <CodeSnippet>
+{`<TooltipProvider>
+    <Tooltip delayDuration={500}>
+        <TooltipTrigger>
+            <Button variant="outline">Hover</Button>
+        </TooltipTrigger>
+        <TooltipContent>
+            <p>Add to library</p>
+        </TooltipContent>
+    </Tooltip>
+</TooltipProvider>`}
+    </CodeSnippet>
         </div>
     );
 }
