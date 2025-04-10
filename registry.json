@@ -212,6 +212,20 @@
           "target": "components/ui/8bit/avatar.tsx"
         }
       ]
+    },
+    {
+      "name": "8bit-alert-dialog",
+      "type": "registry:component",
+      "title": "8-bit Alert Dialog",
+      "description": "A simple 8-bit alert dialog component",
+      "registryDependencies": ["alert-dialog"],
+      "files": [
+        {
+          "path": "components/ui/8bit/alert-dialog.tsx",
+          "type": "registry:component",
+          "target": "components/ui/8bit/alert-dialog.tsx"
+        }
+      ]
     }
   ]
 }
