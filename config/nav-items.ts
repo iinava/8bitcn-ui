@@ -56,6 +56,11 @@ export const navItems = {
           title: "Textarea",
           url: "/components/textarea",
         },
+        {
+          title: "Tooltip",
+          url: "/components/tooltip",
+          new: true,
+        },
       ],
     },
   ],
