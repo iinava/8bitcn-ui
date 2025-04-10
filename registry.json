@@ -184,6 +184,20 @@
           "target": "components/ui/8bit/tooltip.tsx"
         }
       ]
+    },
+    {
+      "name": "8bit-tooltip",
+      "type": "registry:component",
+      "title": "8-bit Tooltip",
+      "description": "A simple 8-bit tooltip component",
+      "registryDependencies": ["tooltip"],
+      "files": [
+        {
+          "path": "components/ui/8bit/tooltip.tsx",
+          "type": "registry:component",
+          "target": "components/ui/8bit/tooltip.tsx"
+        }
+      ]
     }
   ]
 }
